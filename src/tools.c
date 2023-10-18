@@ -6,14 +6,14 @@
 /*   By: bgauthie <bgauthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 16:44:03 by bgauthie          #+#    #+#             */
-/*   Updated: 2023/10/18 10:48:39 by bgauthie         ###   ########.fr       */
+/*   Updated: 2023/10/18 18:49:44 by bgauthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/pipex.h"
 
 /*if cmd file is reachable returns the cmd's path*/
-char	*is_access(t_data *data)
+char	*is_access(t_data *data, char **cmd)
 {
 	int	i;
 
@@ -22,12 +22,12 @@ char	*is_access(t_data *data)
 	{
 		if (!access(data->env[i], X_OK))
 		{
-			free(data->cmd_1[0]);	
+			free(cmd[0]);
 			return (ft_strdup(data->env[i]));
 		}
 		i++;
 	}
-	return (NULL);
+	return (cmd[0]);
 }
 
 /*Finds the line starting by 'PATH=/nfs' in environment and return the index*/

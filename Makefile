@@ -4,7 +4,8 @@ RM = rm -rf
 SRC_PATH = ./src/
 SRC_FILE = 	main.c\
 			free.c\
-			tools.c
+			tools.c\
+			exec.c
 
 SRC = $(addprefix $(SRC_PATH), $(SRC_FILE))
 OBJ_PATH = ./obj/

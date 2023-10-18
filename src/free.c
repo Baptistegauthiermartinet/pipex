@@ -6,7 +6,7 @@
 /*   By: bgauthie <bgauthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 15:57:17 by bgauthie          #+#    #+#             */
-/*   Updated: 2023/10/13 18:07:09 by bgauthie         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:15:18 by bgauthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,4 @@ void	free_struct(t_data *data)
 	free_tab(data->env);
 	free_tab(data->cmd_1);
 	free_tab(data->cmd_2);
-	
 }
