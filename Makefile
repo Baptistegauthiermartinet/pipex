@@ -3,7 +3,6 @@ CC = cc -Wall -Wextra -Werror -g3
 RM = rm -rf
 SRC_PATH = ./src/
 SRC_FILE = 	main.c\
-			check_args.c\
 			free.c\
 			tools.c
 
