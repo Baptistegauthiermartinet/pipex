@@ -6,7 +6,7 @@
 /*   By: bgauthie <bgauthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 16:44:03 by bgauthie          #+#    #+#             */
-/*   Updated: 2023/10/18 18:49:44 by bgauthie         ###   ########.fr       */
+/*   Updated: 2023/10/19 15:18:15 by bgauthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ char	*is_access(t_data *data, char **cmd)
 		}
 		i++;
 	}
+	data->valid = -1;
 	return (cmd[0]);
 }
 
@@ -72,4 +73,12 @@ void	add_cmd_on_path(t_data *data, char *cmd)
 		data->env[i] = join_and_free(data->env[i], cmd);
 		i++;
 	}
+}
+
+/*if arg already a valid path returns 1*/
+int	is_access_path(char *str)
+{
+	if (str[0] == '/' && !access(str, X_OK))
+		return (1);
+	return (0);
 }
