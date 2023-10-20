@@ -6,7 +6,7 @@
 /*   By: bgauthie <bgauthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 15:57:17 by bgauthie          #+#    #+#             */
-/*   Updated: 2023/10/19 16:38:39 by bgauthie         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:21:29 by bgauthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,6 @@ void	print_error(char *msg, char *str, t_data *data)
 void	print_perror(char *msg, t_data *data)
 {
 	perror(msg);
-	if (data->pid_1 == 0)
-		close(data->pipe[1]);
-	if (data->pid_2 == 0)
-		close(data->pipe[0]);
 	if (data->pid_1 == 0 || data->pid_2 == 0)
 		exit_son(data);
 	exit(0);

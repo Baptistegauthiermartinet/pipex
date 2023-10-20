@@ -6,7 +6,7 @@
 /*   By: bgauthie <bgauthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 13:25:37 by bgauthie          #+#    #+#             */
-/*   Updated: 2023/10/19 16:32:24 by bgauthie         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:17:09 by bgauthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	set_struct(t_data *data, char **env, char **av)
 	data->outfile_fd = -1;
 	data->valid = 1;
 	data->infile = av[1];
-
 	data->outfile = av[4];
 }
 

@@ -6,7 +6,7 @@
 /*   By: bgauthie <bgauthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:10:42 by bgauthie          #+#    #+#             */
-/*   Updated: 2023/10/19 16:35:19 by bgauthie         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:15:26 by bgauthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,6 @@ void	exit_son(t_data *data)
 	free_struct(data);
 	close(0);
 	close(1);
-	if (data->infile_fd)
-		close(data->infile_fd);
-	if (data->infile_fd)
-		close(data->outfile_fd);
 	exit(0);
 }
 
