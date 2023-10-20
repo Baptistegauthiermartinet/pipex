@@ -6,17 +6,22 @@
 /*   By: bgauthie <bgauthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 13:21:57 by bgauthie          #+#    #+#             */
-/*   Updated: 2023/10/19 16:22:43 by bgauthie         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:58:04 by bgauthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PIPEX_H
 # define PIPEX_H
 
-# include <stdlib.h>
 # include "../libft/src/libft.h"
+
+/*open, close*/
 # include <fcntl.h>
+
+/*waitpid*/
 # include <wait.h>
+
+/*perror*/
 # include <stdio.h>
 
 # define ERR_INPUT "Error : Wrong number of arguments.\n"
